@@ -1,0 +1,4 @@
+gson-example/target
+gson-example/*.iml
+gson-example/src/main/java/*.class
+.idea
