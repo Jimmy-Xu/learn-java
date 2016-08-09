@@ -32,6 +32,8 @@ pop = true
 ```
 
 ## use java command line
+
+### use maven java lib
 ```
 $ cd src/main/java
 
@@ -39,6 +41,32 @@ $ cd src/main/java
 $ export JAVA_HOME=/usr/java/jdk1.7.0_79
 $ export PATH=$JAVA_HOME/bin:$PATH$
 $ export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$HOME/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar
+
+//compile
+$ javac Example.java
+
+//run
+$ java Example
+write json to file:/home/xjimmy/test.json
+read json from file:/home/xjimmy/test.json
+cat = it
+id = 1,ide = Eclipse,name = java
+id = 2,ide = XCode,name = Swift
+id = 3,ide = Visual Studio,name = C#
+pop = true
+```
+
+### use customized java lib
+
+> add all dependency lib(gson-2.7.jar) to `libs` dir
+
+```
+$ cd src/main/java
+
+//set env
+$ export JAVA_HOME=/usr/java/jdk1.7.0_79
+$ export PATH=$JAVA_HOME/bin:$PATH$
+$ export CLASSPATH=.:../../../libs:$JAVA_HOME/lib/*
 
 //compile
 $ javac Example.java
