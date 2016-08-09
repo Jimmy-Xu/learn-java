@@ -71,3 +71,32 @@ pop = true
 *run*
 
 ![](images/5.run-java.PNG)
+
+
+# package
+
+## use maven
+
+> build fat jar
+
+```
+// package with dependency  
+$ mvn assembly:single
+[INFO] Scanning for projects...
+...
+[INFO] --- maven-assembly-plugin:2.2-beta-5:single (default-cli) @ gson-example ---
+[INFO] Building jar: /home/xjimmy/java/learn-java/gson-example/target/gson-example-1.0-SNAPSHOT-jar-with-dependencies.jar
+...
+
+
+// run 
+$ java -jar target/gson-example-1.0-SNAPSHOT-jar-with-dependencies.jar 
+write json to file:/home/xjimmy/test.json
+read json from file:/home/xjimmy/test.json
+cat = it
+id = 1,ide = Eclipse,name = java
+id = 2,ide = XCode,name = Swift
+id = 3,ide = Visual Studio,name = C#
+pop = true
+
+```
